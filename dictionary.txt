@@ -1,0 +1,51 @@
+fact_i94_records:
+|-- cicid: integer Primary key  i94 immigration unique identifier (immigration data)
+ |-- i94yr: integer  4 digit year (immigration data)
+ |-- i94mon: integer Numeric month (immigration data)
+ |-- i94cit: integer  i94 citizen country in 3 digits code (immigration data)
+ |-- i94res: integer  i94 residence country in 3 digits code (immigration data)
+ |-- i94port: string  i94 arrived port in 3 digits code (immigration data)
+ |-- i94_port_city: string  i94 arrived port city (derived based on I94_SAS_Labels_Descriptions.SAS)
+ |-- i94_port_state: string i94 arrived port state (derived based on I94_SAS_Labels_Descriptions.SAS)
+ |-- arrdate: date    i94 arrive date in readable date format (derived from the original SAS date format)
+ |-- i94mode: string  i94 arrive mode, all the records should be air since the dataset is only looking for flights (derived based on I94_SAS_Labels_Descriptions.SAS)
+ |-- i94addr: string  i94 address (immigration data)
+ |-- depdate: date    i94 depature date in readable date format (derived from the original SAS date format)
+ |-- i94bir: integer   Age of Respondent in Years  (immigration data)
+ |-- i94visa: string   Visa codes in 1 digit format  (immigration data)
+ |-- biryear: integer   4 digit year of birth (immigration data)
+ |-- gender: string   respondent gender  (immigration data)
+ |-- insnum: string   insurance number (immigration data)
+ |-- airline: string   airline name (immigration data)
+ |-- i94_visa_type: string  Visa codes translated into readable type  1 = Business  2 = Pleasure  3 = Student  (derived based on I94_SAS_Labels_Descriptions.SAS)
+ 
+ dim_us_city_demographics:
+ |-- City: string   -| city and state as composite primary key   city on the demographic data
+ |-- State: string  -| city and state as composite primary key   state on the demographic data
+ |-- Median_Age: integer   the mediam age of the people in the city
+ |-- Male_Population: integer   the male population in the city
+ |-- Female_Population: integer   the female population in the city
+ |-- Total_Population: integer   city total population
+ |-- NumberofVeterans: integer    veterans population in the city
+ |-- Foreign_born: integer      number of people who were born outside of US
+ |-- Average_Household_Size: integer    mean of household size in the city
+ |-- State_Code: string     2 digits format of US states 
+ |-- American_Indian_and_Alaska_Native: integer    number of American_Indian_and_Alaska_Native races in the city
+ |-- Hispanic_or_Latino: integer   number of Hispanic_or_Latino races in the city
+ |-- white: integer    number of white races in the city
+ |-- asian: integer    number of asian races in the city
+ |-- Black_or_African_American: integer     number of Black_or_African_American races in the city
+ 
+ dim_temperature:
+ |-- AverageTemperature: decimal(10,2)    Average Temperature for each state between 2003-09-01 and 2013-09-01
+ |-- AverageTemperatureUncertainty: decimal(10,2)    Average Temperature Uncertainty for each state between 2003-09-01 and 2013-09-01
+ |-- state: string    states in US
+ |-- Country: string primary key     should be US for all records
+ 
+ dim_time:
+ |-- date: date primary key   represent the date in yyyy-mm-dd devrived from arrDate and DepDate
+ |-- year: integer     4 digits year of the date
+ |-- month: integer   month of the date
+ |-- day: integer    day of the date
+ |-- week: integer   week of the date
+ |-- weekday: integer   weekday of the date
