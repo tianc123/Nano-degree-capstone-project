@@ -1,8 +1,8 @@
-# Udacity Data Engineer Nanodegree - Capstone Project
+# Udacity Data Engineer Nanodegree Capstone Project: I94 Immigration Dataset Analysis
 
 ### Introduction
 
-The purpose of the data engineering capstone project is to combine what I've learned throughout the program. This project will be an important part of my portfolio that will help me achieve my data engineering-related career goals.
+This is a capstone project for data engineering nano degree at Udacity. I have used 3 datasets including the 2016-09 I94 Immigration data together to complete the project. The main purpose of this project is to firs understand the datasets and design the data model then pre-process the data into desirable format. After that, the data is stored into a durable storage on cloud, which in this project AWS S3 has been used as the data lake for housing the parquet files. Finally data is loaded into a data warehouse for further analysis, which in this project AWS Redshift has been used for this purpose. In this project, after spending some time on understanding the datasets, I have come up the solution and process as mentioned above.
 
 ### Datasets
 I've worked with three datasets to complete the project. The main dataset will include data on immigration to the United States, and supplementary datasets will include data on airport codes, U.S. city demographics, and temperature data. 
