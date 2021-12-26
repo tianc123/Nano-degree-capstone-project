@@ -21,6 +21,8 @@ I've worked with three datasets to complete the project. The main dataset will i
 - immigration_data_sample.csv a sample file to take a look at the data in csv format before reading it all in. 
 - us-cities-demographics-updated.csv updated based on the original U.S. City Demographic Data for poviting the population for races into its own columns
 - dictionary data dictionary for data model for each field, brief description of what the data is and where it came from
+- AWS_Module.py contains AWS variables for connection and user defined functions for created Redshift cluster
+- SQL_Statement.py contains the sql queries for creating tables on Redshift
 - README.md provides discussion on the process and decisions
 
 #### Fact Table
